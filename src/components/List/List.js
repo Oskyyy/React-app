@@ -16,7 +16,7 @@ class List extends React.Component {
     title: PropTypes.node.isRequired,
     image: PropTypes.string.isRequired,
     description: PropTypes.node,
-    columns: PropTypes.array
+    columns: PropTypes.array,
   };
 
   static defaultProps = {
@@ -32,9 +32,9 @@ class List extends React.Component {
             key: state.columns.length ? state.columns[state.columns.length-1].key+1 : 0,
             title,
             icon: 'list-alt',
-            cards: []
-          }
-        ]
+            cards: [],
+          },
+        ],
       }
     ));
   }

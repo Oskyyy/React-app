@@ -8,14 +8,14 @@ import PropTypes from 'prop-types';
 
 class Column extends React.Component {
   state = {
-    cards: this.props.cards || []
+    cards: this.props.cards || [],
   };
 
   static propTypes = {
     title: PropTypes.node.isRequired,
     image: PropTypes.string.isRequired,
     cards: PropTypes.array,
-    icon: PropTypes.string.isRequired
+    icon: PropTypes.string.isRequired,
   };
 
   addCard(title) {
@@ -25,9 +25,9 @@ class Column extends React.Component {
         {
           key: state.cards.length ? state.cards[state.cards.length - 1].key + 1 : 0,
           title,
-          icon: "list-alt"
-        }
-      ]
+          icon: 'list-alt',
+        },
+      ],
     }));
   }
 
@@ -35,7 +35,7 @@ class Column extends React.Component {
     return (
       <section className={styles.component}>
         <h3 className={styles.title}>
-          {this.props.title}>
+          {this.props.title}
           <span className={styles.icon}>
             <Icon name={this.props.icon} />
           </span>
